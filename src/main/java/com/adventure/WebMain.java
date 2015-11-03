@@ -2,7 +2,7 @@ package com.adventure;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -19,12 +19,12 @@ public class WebMain {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String checkGuess(@PathParam("a") int a,
-                             @PathParam("b") int b,
-                             @PathParam("guess") int guess) {
+    public String checkGuess(@QueryParam("a") int a,
+                             @QueryParam("b") int b,
+                             @QueryParam("guess") int guess) {
         String response;
         yc = new YourClass();
-
+System.out.println("You gave me: " + a + ", and b is " + b + " with guess " + guess);
         Boolean answer = yc.check(a, b, guess);
         if (answer) {
             response = "Great you answered correctly!";
