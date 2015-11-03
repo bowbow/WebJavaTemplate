@@ -15,6 +15,9 @@ dependencies {
     //This Guava version works with Cassandra 2.1 and greater.
     compile 'com.google.guava:guava:16.0.1'
     compile 'com.sun.jersey:jersey-bundle:1.18'
+    compile 'com.sun.jersey:jersey-server:1.13'
+    compile 'com.sun.jersey:jersey-core:1.13'
+    compile 'com.sun.jersey:jersey-servlet:1.13'
 
 
     //RestAssured and JSON Schema validation
